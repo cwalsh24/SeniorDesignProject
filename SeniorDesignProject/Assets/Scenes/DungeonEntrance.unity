@@ -10880,11 +10880,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5708388465002960424, guid: d1e28fcda0a39fe40b85647532c4283b, type: 3}
       propertyPath: areaToLoad
-      value: Cave
+      value: WaterDungeon
       objectReference: {fileID: 0}
     - target: {fileID: 5708388465002960424, guid: d1e28fcda0a39fe40b85647532c4283b, type: 3}
       propertyPath: areaTransitionName
-      value: CaveEntrance
+      value: WaterDungeon-1
       objectReference: {fileID: 0}
     - target: {fileID: 5708388465002960425, guid: d1e28fcda0a39fe40b85647532c4283b, type: 3}
       propertyPath: m_RootOrder
