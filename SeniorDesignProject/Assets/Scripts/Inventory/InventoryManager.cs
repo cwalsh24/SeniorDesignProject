@@ -10,7 +10,7 @@ public class InventoryManager : Singleton<InventoryManager>
 {
     #region Public Variables
 
-    public enum CurrentEquippedItem { Boomerang, Bomb };
+    public enum CurrentEquippedItem { Boomerang, Bomb, Bow };
     public CurrentEquippedItem currentEquippedItem;
     public GameObject itemEquippedInv;
     public GameObject currentSelectedItem;
@@ -26,6 +26,7 @@ public class InventoryManager : Singleton<InventoryManager>
     private PlayerControls playerControls;
     private const string boomerangString = "Boomerang";
     private const string bombString = "Bomb";
+    private const string bowString = "Bow";
 
     #endregion
 
@@ -101,7 +102,9 @@ public class InventoryManager : Singleton<InventoryManager>
                 currentEquippedItem = CurrentEquippedItem.Boomerang;
             } else if (thisItem.item.itemType == bombString) {
                 currentEquippedItem = CurrentEquippedItem.Bomb;
-            } 
+            } else if (thisItem.item.itemType == bowString) {
+                currentEquippedItem = CurrentEquippedItem.Bow;
+            }
 
             itemEquippedInv = thisItem.item.useItemPrefab;
         } else {
