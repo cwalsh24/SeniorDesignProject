@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bow : MonoBehaviour
+public class Arrow : MonoBehaviour
 {
     #region Private Variables
 
@@ -13,6 +13,8 @@ public class Bow : MonoBehaviour
     [SerializeField] private bool moving = true; 
     [SerializeField] private float maxTravelDistance = 8f;
     Rigidbody2D m_Rigidbody;
+    SpriteRenderer m_SpriteRenderer;
+
     private PlayerController player;
     private Vector2 locationToThrow;
 
@@ -26,22 +28,20 @@ public class Bow : MonoBehaviour
 
     private void Start() {
         m_Rigidbody = GetComponent<Rigidbody2D>();
+        m_SpriteRenderer = GetComponent<SpriteRenderer>();
         FindPositionToThrow();
     }
 
     private void Update()
     {
-        //transform.Rotate(new Vector3(0f, 0f, spinSpeed) * Time.deltaTime);
-
-        //DetectDestination();
-        MoveBoomerang();
+        MoveArrow();
     }
 
     #endregion
 
     #region Private Methods
 
-    // Finds a Vector2 position away from the player's current facing direction + throwDistance of the Boomerang
+    // Finds a Vector2 position away from the player's current facing direction + throwDistance of the Arrow
     // also angles the arrow in the correct direction
     private void FindPositionToThrow() {
         Animator playerAnimator = player.GetComponent<Animator>();
@@ -65,16 +65,8 @@ public class Bow : MonoBehaviour
 
         moving = true;
     }
-    
 
-    // Once the Boomerang gets closes to the target locationToThrow position, the boomerang will turn around and head back towards the hero
-    //private void DetectDestination() {
-    //    if (goForward && Vector2.Distance(locationToThrow, transform.position) < .5f) {
-    //        goForward = false;
-    //    }
-    //}
-
-    private void MoveBoomerang() {
+    private void MoveArrow() {
         if (moving) {
             transform.position = Vector2.MoveTowards(transform.position, locationToThrow, throwSpeed * Time.deltaTime);
         }
@@ -84,8 +76,27 @@ public class Bow : MonoBehaviour
             player.itemInUse = false;
             //Freeze all positions
             m_Rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
-            Destroy(this.gameObject, 4);
+            // Start destroy "animation"
+            StartCoroutine(WaitDestroy(3.5f, 1.5f));
         }
+    }
+
+    private IEnumerator WaitDestroy(float delay, float blinkTime)
+    {
+        // wait before blink
+        yield return new WaitForSeconds(delay);
+
+        // blinking
+        for (int i = 0; i < blinkTime * 2; i++)
+        {
+            m_SpriteRenderer.enabled = false;
+            yield return new WaitForSeconds(0.25f);
+            m_SpriteRenderer.enabled = true;
+            yield return new WaitForSeconds(0.25f);
+        }
+
+        // destroy
+        Destroy(this.gameObject);
     }
 
     // If the boomerang hits a collider before getting to it's targeted direction 
@@ -97,8 +108,13 @@ public class Bow : MonoBehaviour
         {
             enemy.TakeDamage(arrowDamage);
             other.gameObject.GetComponent<KnockBack>().getKnockedBack(transform, thrust);
-            Destroy(this.gameObject);
             player.itemInUse = false;
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            player.itemInUse = false;
+            Destroy(this.gameObject);
         }
     }
     #endregion
