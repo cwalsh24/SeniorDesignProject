@@ -35,6 +35,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WaterDungeonScreen3.unity
     guid: 9f8e2981ed3ff4241a68a3db1a46687b
+  - enabled: 1
+    path: Assets/Scenes/WaterDungeonScreen4.unity
+    guid: 160f99a0fdbb1ee44a0f4cbaea133cbd
+  - enabled: 1
+    path: Assets/Scenes/WaterDungeonScreen5.unity
+    guid: 353e8625283a5c1449c31e41f6859057
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
