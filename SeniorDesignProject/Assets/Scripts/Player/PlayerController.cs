@@ -28,6 +28,9 @@ public class PlayerController : Singleton<PlayerController>
     [SerializeField] private GameObject hitBox_Left;
     [SerializeField] private GameObject hitBox_Right;
 
+    //Adding this to attempt to put in a sound effect for attacking
+    [SerializeField] private AudioSource SwordAttack;
+
     // GameState used to handle when Hero can take certain actions.  Could expand on this depending on if you wanted to add different player game handling states.
     private enum GameState { Playing, Paused};
     private GameState currentGameState;
@@ -170,13 +173,13 @@ public class PlayerController : Singleton<PlayerController>
         }
     }
 
-    private void Move() {
+    private void Move() { //might want a walking sound
         if (!canMove) { return; }
 
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
-    private void StartRun() {
+    private void StartRun() { //might want to find a running sound
         myAnimator.SetBool("isRunning", true);
         moveSpeed += runSpeed;
     }
@@ -191,6 +194,7 @@ public class PlayerController : Singleton<PlayerController>
             rb.velocity = Vector2.zero;
             canMove = false;
             myAnimator.SetTrigger("attack");
+            SwordAttack.Play(); 
         }
     }
 
@@ -203,7 +207,7 @@ public class PlayerController : Singleton<PlayerController>
         hitBox_Top.SetActive(false);
     }
 
-    private void UseItem() {
+    private void UseItem() { //Boomerang and all other items, we might want a generic use sound effect 
         if (canAttack && currentGameState != GameState.Paused) {
             rb.velocity = Vector2.zero;
             canMove = false;
