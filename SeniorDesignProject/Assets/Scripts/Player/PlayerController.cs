@@ -28,6 +28,9 @@ public class PlayerController : Singleton<PlayerController>
     [SerializeField] private GameObject hitBox_Left;
     [SerializeField] private GameObject hitBox_Right;
 
+    //Adding this to attempt to put in a sound effect for attacking
+    [SerializeField] private AudioSource SwordAttack;
+
     // GameState used to handle when Hero can take certain actions.  Could expand on this depending on if you wanted to add different player game handling states.
     private enum GameState { Playing, Paused};
     private GameState currentGameState;
@@ -191,6 +194,7 @@ public class PlayerController : Singleton<PlayerController>
             rb.velocity = Vector2.zero;
             canMove = false;
             myAnimator.SetTrigger("attack");
+            SwordAttack.Play(); 
         }
     }
 
