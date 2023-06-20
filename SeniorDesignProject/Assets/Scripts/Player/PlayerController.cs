@@ -173,13 +173,13 @@ public class PlayerController : Singleton<PlayerController>
         }
     }
 
-    private void Move() {
+    private void Move() { //might want a walking sound
         if (!canMove) { return; }
 
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
-    private void StartRun() {
+    private void StartRun() { //might want to find a running sound
         myAnimator.SetBool("isRunning", true);
         moveSpeed += runSpeed;
     }
@@ -207,7 +207,7 @@ public class PlayerController : Singleton<PlayerController>
         hitBox_Top.SetActive(false);
     }
 
-    private void UseItem() {
+    private void UseItem() { //Boomerang and all other items, we might want a generic use sound effect 
         if (canAttack && currentGameState != GameState.Paused) {
             rb.velocity = Vector2.zero;
             canMove = false;
