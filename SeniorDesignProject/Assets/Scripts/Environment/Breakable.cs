@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Breakable : MonoBehaviour
 {
-    [SerializeField] private GameObject droppedItem;
+    [SerializeField] private GameObject Heart;
+    [SerializeField] private GameObject BlueRupee;
+    //[SerializeField] private GameObject droppedItem;
     [SerializeField] private enum ObjectType {pot, bush};
     [SerializeField] private ObjectType objectType;
 
     //Added for a sound effect
     [SerializeField] private AudioSource BreakSound;
+
+    private enum DropType { Rupee, Heart, None};
 
     public void BreakObject() {
         gameObject.GetComponent<Animator>().SetTrigger("Break");
@@ -19,25 +23,29 @@ public class Breakable : MonoBehaviour
         BreakSound.Play();
     }
 
-    private string GetRandomDrop() {
-        int random;
-        random = Random.Range(0, 1);
-        switch (random)
+    private void InstantiateRandom() {
+        DropType dropType = (DropType)Random.Range(0, System.Enum.GetValues(typeof(DropType)).Length);
+        GameObject dropPrefab;
+        switch (dropType)
         {
-            case 0:
-                return "Heart";
-            case 1:
-                return "Blue_Rupee";
+            case DropType.Heart:
+                dropPrefab = Instantiate(Heart, transform.position, Quaternion.identity) as GameObject;
+                break;
+            case DropType.Rupee:
+                // Possible add a random 
+                dropPrefab = Instantiate(BlueRupee, transform.position, Quaternion.identity) as GameObject;
+                break;
             default:
-                return "";
+                break;
         }
     }
 
     private IEnumerator DelayDestroyRoutine(GameObject other) {
+
         switch (objectType) {
             case ObjectType.pot:
-                GameObject dropPrefab = Instantiate(droppedItem, transform.position, Quaternion.identity) as GameObject;
-                dropPrefab.transform.parent = GameObject.Find(GetRandomDrop()).transform;
+                InstantiateRandom();
+                //GameObject dropPrefab = Instantiate(Heart, transform.position, Quaternion.identity) as GameObject;
                 break;
         }
 
