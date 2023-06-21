@@ -8,11 +8,15 @@ public class Breakable : MonoBehaviour
     [SerializeField] private enum ObjectType {pot, bush};
     [SerializeField] private ObjectType objectType;
 
+    //Added for a sound effect
+    [SerializeField] private AudioSource BreakSound;
+
     public void BreakObject() {
         gameObject.GetComponent<Animator>().SetTrigger("Break");
         gameObject.GetComponent<BoxCollider2D>().enabled = false;
 
         StartCoroutine(DelayDestroyRoutine(gameObject));
+        BreakSound.Play();
     }
 
     private IEnumerator DelayDestroyRoutine(GameObject other) {
