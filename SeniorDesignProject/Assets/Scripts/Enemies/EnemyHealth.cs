@@ -17,6 +17,7 @@ public class EnemyHealth : MonoBehaviour
 
     //added for sound effects
     [SerializeField] private AudioSource DamageSound;
+    //[SerializeField] private AudioSource DeathSound;
 
     #endregion
 
