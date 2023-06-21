@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 // Updates UI based on event system's current selected object. 
 public class InventoryManager : Singleton<InventoryManager>
@@ -52,6 +53,7 @@ public class InventoryManager : Singleton<InventoryManager>
     }
 
     private void Update() {
+
         UpdateDetectIfItemChange();
     }
 
