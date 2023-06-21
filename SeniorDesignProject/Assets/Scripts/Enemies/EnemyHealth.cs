@@ -15,6 +15,9 @@ public class EnemyHealth : MonoBehaviour
     private Material matDefault;
     private SpriteRenderer spriteRenderer;
 
+    //added for sound effects
+    [SerializeField] private AudioSource DamageSound;
+
     #endregion
 
     private void Awake() {
@@ -34,6 +37,7 @@ public class EnemyHealth : MonoBehaviour
         currentHealth -= damage;
         spriteRenderer.material = matWhiteFlash;
         StartCoroutine(SetDefaultMatRoutine(setDefaultMatRestorefloat));
+        DamageSound.Play();
     }
 
     private void DetectDeath() {
