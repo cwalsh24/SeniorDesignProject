@@ -1311,8 +1311,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be0d3acd7b90934eafa8eb47c21a140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blue_rupee: {fileID: 7986285643084891503, guid: 1abcdbbfea1006448ab3ae8660a7d6fb, type: 3}
+  droppedItem: {fileID: 0}
   objectType: 1
+  BreakSound: {fileID: 0}
 --- !u!95 &965977868
 Animator:
   serializedVersion: 5
@@ -1530,8 +1531,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be0d3acd7b90934eafa8eb47c21a140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blue_rupee: {fileID: 7986285643084891503, guid: 1abcdbbfea1006448ab3ae8660a7d6fb, type: 3}
+  droppedItem: {fileID: 0}
   objectType: 1
+  BreakSound: {fileID: 0}
 --- !u!95 &1047186916
 Animator:
   serializedVersion: 5
@@ -1653,8 +1655,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be0d3acd7b90934eafa8eb47c21a140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blue_rupee: {fileID: 7986285643084891503, guid: 1abcdbbfea1006448ab3ae8660a7d6fb, type: 3}
+  droppedItem: {fileID: 0}
   objectType: 1
+  BreakSound: {fileID: 0}
 --- !u!95 &1075181421
 Animator:
   serializedVersion: 5
@@ -1957,8 +1960,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be0d3acd7b90934eafa8eb47c21a140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blue_rupee: {fileID: 7986285643084891503, guid: 1abcdbbfea1006448ab3ae8660a7d6fb, type: 3}
+  droppedItem: {fileID: 0}
   objectType: 1
+  BreakSound: {fileID: 0}
 --- !u!95 &1132028212
 Animator:
   serializedVersion: 5
@@ -2427,8 +2431,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be0d3acd7b90934eafa8eb47c21a140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blue_rupee: {fileID: 7986285643084891503, guid: 1abcdbbfea1006448ab3ae8660a7d6fb, type: 3}
+  droppedItem: {fileID: 0}
   objectType: 1
+  BreakSound: {fileID: 0}
 --- !u!95 &1396644342
 Animator:
   serializedVersion: 5
@@ -2921,8 +2926,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be0d3acd7b90934eafa8eb47c21a140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blue_rupee: {fileID: 7986285643084891503, guid: 1abcdbbfea1006448ab3ae8660a7d6fb, type: 3}
+  droppedItem: {fileID: 0}
   objectType: 1
+  BreakSound: {fileID: 0}
 --- !u!95 &1629130214
 Animator:
   serializedVersion: 5
@@ -3434,8 +3440,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be0d3acd7b90934eafa8eb47c21a140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blue_rupee: {fileID: 7986285643084891503, guid: 1abcdbbfea1006448ab3ae8660a7d6fb, type: 3}
+  droppedItem: {fileID: 0}
   objectType: 1
+  BreakSound: {fileID: 0}
 --- !u!4 &1959561235 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4271078425829033107, guid: c8a64349710df7345b77f79f3a2dc8c6, type: 3}
@@ -3582,8 +3589,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be0d3acd7b90934eafa8eb47c21a140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blue_rupee: {fileID: 7986285643084891503, guid: 1abcdbbfea1006448ab3ae8660a7d6fb, type: 3}
+  droppedItem: {fileID: 0}
   objectType: 1
+  BreakSound: {fileID: 0}
 --- !u!95 &2070816516
 Animator:
   serializedVersion: 5

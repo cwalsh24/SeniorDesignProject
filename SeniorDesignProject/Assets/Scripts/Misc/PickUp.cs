@@ -5,7 +5,7 @@ using UnityEngine;
 public class PickUp : MonoBehaviour
 {
     // Keeping Bomb as placeholder if you wanted to implement something like item limited amounts 
-    public enum TypeOfPickUp{Rupee, Bomb};
+    public enum TypeOfPickUp{Rupee, Bomb, Heart};
     public TypeOfPickUp typeOfPickUp;
 
     private const string playerString = "Player";
@@ -17,10 +17,19 @@ public class PickUp : MonoBehaviour
             if (typeOfPickUp == TypeOfPickUp.Rupee) {
                 PickUpRupee();
             }
+            else if (typeOfPickUp == TypeOfPickUp.Heart)
+            {
+                PickUpHeart();
+            }
         }
     }
 
     private void PickUpRupee() {
         FindObjectOfType<RupeeWallet>().IncreaseRupeeCount(1);
+    }
+
+    private void PickUpHeart()
+    {
+        FindObjectOfType<PlayerHealth>().AddHealth(1);
     }
 }

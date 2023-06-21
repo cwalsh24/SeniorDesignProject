@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be0d3acd7b90934eafa8eb47c21a140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blue_rupee: {fileID: 7986285643084891503, guid: 1abcdbbfea1006448ab3ae8660a7d6fb, type: 3}
+  droppedItem: {fileID: 7986285643084891503, guid: 31c3936cc77a746e0b051c70910d7ac4, type: 3}
   objectType: 0
   BreakSound: {fileID: 5512302219068534943}
 --- !u!82 &5512302219068534943
