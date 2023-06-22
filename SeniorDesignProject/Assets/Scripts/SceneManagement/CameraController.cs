@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.SceneManagement;
 
 public class CameraController : Singleton<CameraController>
 {
@@ -33,7 +34,11 @@ public class CameraController : Singleton<CameraController>
     }
 
     private void Update() {
-        FindPlayer();
+        if (SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            return;
+        }
+            FindPlayer();
     }
 
     private void LateUpdate()
