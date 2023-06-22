@@ -24,7 +24,9 @@ public class Breakable : MonoBehaviour
     }
 
     private void InstantiateRandom() {
+        //DropType dropType = (DropType)Random.Range(0, System.Enum.GetValues(typeof(DropType)).Length+5);
         DropType dropType = (DropType)Random.Range(0, System.Enum.GetValues(typeof(DropType)).Length);
+
         GameObject dropPrefab;
         switch (dropType)
         {
