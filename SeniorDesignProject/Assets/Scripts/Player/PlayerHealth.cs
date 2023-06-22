@@ -51,6 +51,19 @@ public class PlayerHealth : MonoBehaviour
 
     #region Public Methods
 
+    public void AddHealth(int health) {
+        int newHealth = this.currentHealth + health;
+
+        if (newHealth > maxHealth)
+        {
+            this.currentHealth = maxHealth;
+        }
+        else
+        {
+            this.currentHealth = newHealth;
+        }
+    }
+
     public void CheckIfDeath() {
         if (currentHealth <= 0 && !isDead) {
             // isDead set to prevent death animation from triggering multiple times

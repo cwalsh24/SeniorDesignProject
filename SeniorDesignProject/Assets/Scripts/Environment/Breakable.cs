@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Breakable : MonoBehaviour
 {
-    [SerializeField] private GameObject blue_rupee;
+    [SerializeField] private GameObject Heart;
+    [SerializeField] private GameObject BlueRupee;
+    //[SerializeField] private GameObject droppedItem;
     [SerializeField] private enum ObjectType {pot, bush};
     [SerializeField] private ObjectType objectType;
 
     //Added for a sound effect
     [SerializeField] private AudioSource BreakSound;
+
+    private enum DropType { Rupee, Heart, None};
 
     public void BreakObject() {
         gameObject.GetComponent<Animator>().SetTrigger("Break");
@@ -19,13 +23,32 @@ public class Breakable : MonoBehaviour
         BreakSound.Play();
     }
 
-    private IEnumerator DelayDestroyRoutine(GameObject other) {
-        switch (objectType) {
-            case ObjectType.pot: 
-                Instantiate(blue_rupee, transform.position, Quaternion.identity);
+    private void InstantiateRandom() {
+        //DropType dropType = (DropType)Random.Range(0, System.Enum.GetValues(typeof(DropType)).Length+5);
+        DropType dropType = (DropType)Random.Range(0, System.Enum.GetValues(typeof(DropType)).Length);
+
+        GameObject dropPrefab;
+        switch (dropType)
+        {
+            case DropType.Heart:
+                dropPrefab = Instantiate(Heart, transform.position, Quaternion.identity) as GameObject;
                 break;
-            case ObjectType.bush: 
-                break; 
+            case DropType.Rupee:
+                // Possible add a random 
+                dropPrefab = Instantiate(BlueRupee, transform.position, Quaternion.identity) as GameObject;
+                break;
+            default:
+                break;
+        }
+    }
+
+    private IEnumerator DelayDestroyRoutine(GameObject other) {
+
+        switch (objectType) {
+            case ObjectType.pot:
+                InstantiateRandom();
+                //GameObject dropPrefab = Instantiate(Heart, transform.position, Quaternion.identity) as GameObject;
+                break;
         }
 
         yield return new WaitForSeconds(2f);

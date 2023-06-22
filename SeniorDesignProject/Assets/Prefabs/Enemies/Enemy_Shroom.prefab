@@ -183,7 +183,7 @@ MonoBehaviour:
   currentHealth: 0
   rb: {fileID: 4485659838217297934}
   matWhiteFlash: {fileID: 2100000, guid: 52c6cabe18a9a1d42bbf7e7ad4930379, type: 2}
-  deathVFX: {fileID: 1110264763428426, guid: b2d9a04fd4116544a8364081c10eb8af, type: 3}
+  possibleDrop: {fileID: 7986285643084891503, guid: 31c3936cc77a746e0b051c70910d7ac4, type: 3}
   setDefaultMatRestorefloat: 0.1
   DamageSound: {fileID: 5760917174309395039}
 --- !u!114 &-7731275462701633184

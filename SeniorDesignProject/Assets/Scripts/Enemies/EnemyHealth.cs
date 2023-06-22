@@ -10,7 +10,9 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private int currentHealth;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Material matWhiteFlash;
-    [SerializeField] private GameObject deathVFX;
+    // deathVFX was the sparkly things that appeared after death
+    //[SerializeField] private GameObject deathVFX;
+    [SerializeField] private GameObject possibleDrop; // normally a heart that may drop on enemy death
     [SerializeField] private float setDefaultMatRestorefloat = .1f;
     private Material matDefault;
     private SpriteRenderer spriteRenderer;
@@ -43,7 +45,12 @@ public class EnemyHealth : MonoBehaviour
 
     private void DetectDeath() {
         if (currentHealth <= 0) {
-            Instantiate(deathVFX, transform.position, transform.rotation);
+            // Random drop chance
+            if ( Random.Range(0, 3) == 0) { // 1/3 chance of dropping the possibleDrop
+                Instantiate(possibleDrop, transform.position, transform.rotation);
+            }
+
+            // destroy the dead enemy
             Destroy(gameObject);
         }
     }
