@@ -9,6 +9,9 @@ public class RupeeWallet : MonoBehaviour
     
     [SerializeField] private TMP_Text rupeeText;
 
+    //Adding this to attempt to put in a sound effect for attacking
+    [SerializeField] private AudioSource RupeeSound;
+
     private void Update() {
         UpdateRupeeText();
     }
@@ -19,5 +22,6 @@ public class RupeeWallet : MonoBehaviour
 
     public void IncreaseRupeeCount(int amount) {
         currentRupees += amount;
+        RupeeSound.Play();
     }
 }
