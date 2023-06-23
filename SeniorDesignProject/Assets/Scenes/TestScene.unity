@@ -5265,6 +5265,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1064184063, guid: 8c93db226cc633f4293e16b1d88c0377, type: 3}
+      propertyPath: lines.Array.data[0]
+      value: DANGER!
+      objectReference: {fileID: 0}
     - target: {fileID: 7718546635806022259, guid: 8c93db226cc633f4293e16b1d88c0377, type: 3}
       propertyPath: m_Name
       value: Sign
