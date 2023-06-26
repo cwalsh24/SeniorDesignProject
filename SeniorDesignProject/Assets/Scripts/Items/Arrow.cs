@@ -18,12 +18,16 @@ public class Arrow : MonoBehaviour
     private PlayerController player;
     private Vector2 locationToThrow;
 
+    //fire sound effect
+    [SerializeField] private AudioSource FireSound;
+
     #endregion
 
     #region Unity Methods
 
     private void Awake() {
         player = FindObjectOfType<PlayerController>();
+        FireSound.Play();
     }
 
     private void Start() {
