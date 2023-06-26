@@ -12,19 +12,26 @@ public class PickUp : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag(playerString)) {
-            Destroy(gameObject);
 
-            if (typeOfPickUp == TypeOfPickUp.Rupee) {
-                PickUpRupee();
-            }
-            else if (typeOfPickUp == TypeOfPickUp.Heart)
-            {
-                PickUpHeart();
-            }
-            else if (typeOfPickUp == TypeOfPickUp.Heart_Container)
-            {
-                IncreaseHealth();
-            }
+            PickUpEffect();
+            Destroy(gameObject);
+        }
+    }
+
+    // PickUpEffect() uses the typeOfPickup to perform the corresponding effect
+    public void PickUpEffect()
+    {
+        if (typeOfPickUp == TypeOfPickUp.Rupee)
+        {
+            PickUpRupee();
+        }
+        else if (typeOfPickUp == TypeOfPickUp.Heart)
+        {
+            PickUpHeart();
+        }
+        else if (typeOfPickUp == TypeOfPickUp.Heart_Container)
+        {
+            IncreaseHealth();
         }
     }
 
