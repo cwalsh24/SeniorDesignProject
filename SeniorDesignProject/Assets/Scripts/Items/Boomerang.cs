@@ -15,12 +15,16 @@ public class Boomerang : MonoBehaviour
     private PlayerController player;
     private Vector2 locationToThrow;
 
+    //throwing sound effect
+    [SerializeField] private AudioSource ThrowSound;
+
     #endregion
 
     #region Unity Methods
 
     private void Awake() {
         player = FindObjectOfType<PlayerController>();
+        ThrowSound.Play();
     }
 
     private void Start() {
