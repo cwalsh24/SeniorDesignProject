@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 477870603
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -121,8 +121,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00084898685, y: -0.25283292}
-  m_Size: {x: 1.19276, y: 2.6555252}
+  m_Offset: {x: -0.029040033, y: -0.54531616}
+  m_Size: {x: 1.4605751, y: 3.2404916}
   m_Direction: 0
 --- !u!114 &1175212080833202659
 MonoBehaviour:
@@ -136,4 +136,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b353c8686dfc4473688da81148aad8ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Shop_Item_Type: 0
+  ShopItemType: 3

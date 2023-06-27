@@ -6,19 +6,22 @@ public class ShopItem : MonoBehaviour
 {
     private PickUp PickUpScript;
     [SerializeField] private PickUp.TypeOfPickUp ShopItemType;
-    
 
     // Start is called before the first frame update
     void Start()
     {
-        PickUpScript = new PickUp();
-        PickUpScript.typeOfPickUp = ShopItemType;
+        gameObject.AddComponent<PickUp>();
+        gameObject.GetComponent<PickUp>().canPickup = false;
+        gameObject.GetComponent<PickUp>().typeOfPickUp = ShopItemType;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        PickUpScript.PickUpEffect();
-        Destroy(gameObject);
+        if (other.gameObject.CompareTag(PickUp.playerString))
+        {
+            gameObject.GetComponent<PickUp>().canPickup = true;
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame

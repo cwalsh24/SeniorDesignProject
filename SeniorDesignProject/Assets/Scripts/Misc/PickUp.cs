@@ -7,29 +7,29 @@ public class PickUp : MonoBehaviour
     // Keeping Bomb as placeholder if you wanted to implement something like item limited amounts 
     public enum TypeOfPickUp{Rupee, Bomb, Heart, Heart_Container};
     public TypeOfPickUp typeOfPickUp;
+    public bool canPickup;
 
-    private const string playerString = "Player";
+    public const string playerString = "Player";
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.CompareTag(playerString)) {
-
-            PickUpEffect();
+        if (other.gameObject.CompareTag(playerString) && canPickup) {
+            PickUpEffect(typeOfPickUp);
             Destroy(gameObject);
         }
     }
 
     // PickUpEffect() uses the typeOfPickup to perform the corresponding effect
-    public void PickUpEffect()
+    public void PickUpEffect(TypeOfPickUp pickUpType)
     {
-        if (typeOfPickUp == TypeOfPickUp.Rupee)
+        if (pickUpType == TypeOfPickUp.Rupee)
         {
             PickUpRupee();
         }
-        else if (typeOfPickUp == TypeOfPickUp.Heart)
+        else if (pickUpType == TypeOfPickUp.Heart)
         {
             PickUpHeart();
         }
-        else if (typeOfPickUp == TypeOfPickUp.Heart_Container)
+        else if (pickUpType == TypeOfPickUp.Heart_Container)
         {
             IncreaseHealth();
         }
