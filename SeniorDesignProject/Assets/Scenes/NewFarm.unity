@@ -26494,67 +26494,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 966ba6d4c7edd5a48afb35589c5d8722, type: 3}
---- !u!1001 &731732595
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 2008209919}
-    m_Modifications:
-    - target: {fileID: 1064184063, guid: 8c93db226cc633f4293e16b1d88c0377, type: 3}
-      propertyPath: lines.Array.data[0]
-      value: Welcome to Harbor Town!
-      objectReference: {fileID: 0}
-    - target: {fileID: 7718546635806022259, guid: 8c93db226cc633f4293e16b1d88c0377, type: 3}
-      propertyPath: m_Name
-      value: Sign
-      objectReference: {fileID: 0}
-    - target: {fileID: 7718546635806022261, guid: 8c93db226cc633f4293e16b1d88c0377, type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7718546635806022261, guid: 8c93db226cc633f4293e16b1d88c0377, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7718546635806022261, guid: 8c93db226cc633f4293e16b1d88c0377, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7718546635806022261, guid: 8c93db226cc633f4293e16b1d88c0377, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7718546635806022261, guid: 8c93db226cc633f4293e16b1d88c0377, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7718546635806022261, guid: 8c93db226cc633f4293e16b1d88c0377, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7718546635806022261, guid: 8c93db226cc633f4293e16b1d88c0377, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7718546635806022261, guid: 8c93db226cc633f4293e16b1d88c0377, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7718546635806022261, guid: 8c93db226cc633f4293e16b1d88c0377, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7718546635806022261, guid: 8c93db226cc633f4293e16b1d88c0377, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7718546635806022261, guid: 8c93db226cc633f4293e16b1d88c0377, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8c93db226cc633f4293e16b1d88c0377, type: 3}
 --- !u!1001 &734759303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35334,11 +35273,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8a64349710df7345b77f79f3a2dc8c6, type: 3}
---- !u!4 &1664539462 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7718546635806022261, guid: 8c93db226cc633f4293e16b1d88c0377, type: 3}
-  m_PrefabInstance: {fileID: 731732595}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1670497481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36913,7 +36847,6 @@ Transform:
   - {fileID: 1133775978}
   - {fileID: 1513051695}
   - {fileID: 1437296581}
-  - {fileID: 1664539462}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
