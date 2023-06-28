@@ -30,6 +30,12 @@ public class PlayerHealth : MonoBehaviour
     //Adding this to attempt to put in a sound effect for picking up hearts
     [SerializeField] private AudioSource HPickup;
 
+    //Adding this to attempt to put in a sound effect for dying
+    [SerializeField] private AudioSource DeathSound;
+
+    //Adding this to attempt to put in a sound effect for taking damage
+    [SerializeField] private AudioSource DamageSound;
+
     #endregion
 
     #region Unity Methods
@@ -72,6 +78,7 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0 && !isDead) {
             // isDead set to prevent death animation from triggering multiple times
             isDead = true;
+            DeathSound.Play();
             PlayerController.Instance.canMove = false;
             PlayerController.Instance.canAttack = false;
             myAnimator.SetTrigger("dead");
@@ -83,6 +90,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
     public void TakeDamage(int damage) {
+        DamageSound.Play();
         spriteRenderer.material = whiteFlashMat;
         currentHealth -= damage;
         canTakeDamage = false;
