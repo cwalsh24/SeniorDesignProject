@@ -27,6 +27,9 @@ public class PlayerHealth : MonoBehaviour
     private bool isDead = false;
     private Rigidbody2D rb;
 
+    //Adding this to attempt to put in a sound effect for picking up hearts
+    [SerializeField] private AudioSource HPickup;
+
     #endregion
 
     #region Unity Methods
@@ -53,6 +56,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void AddHealth(int health) {
         int newHealth = this.currentHealth + health;
+        HPickup.Play();
 
         if (newHealth > maxHealth)
         {
