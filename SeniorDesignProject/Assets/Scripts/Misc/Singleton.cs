@@ -9,7 +9,7 @@ public class Singleton<T> : MonoBehaviour where T : Singleton<T> {
     protected virtual void Awake () {
         if (instance != null) {
             // Can use for unity error logs 
-            // Debug.LogErrorFormat("[Singleton] Trying to instantiate a second instance of singleton class {0} from {1}", GetType().Name,  this.gameObject.name);
+             //Debug.LogErrorFormat("[Singleton] Trying to instantiate a second instance of singleton class {0} from {1}", GetType().Name,  this.gameObject.name);
             Destroy(this.gameObject);
         } else {
             instance = (T)this;

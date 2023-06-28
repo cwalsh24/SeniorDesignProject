@@ -7,32 +7,44 @@ public class PickUp : MonoBehaviour
     // Keeping Bomb as placeholder if you wanted to implement something like item limited amounts 
     public enum TypeOfPickUp{Rupee, Bomb, Heart, Heart_Container};
     public TypeOfPickUp typeOfPickUp;
-    public bool canPickup;
+    public bool preventPickup;
+    public int cost;
 
     public const string playerString = "Player";
 
-    private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.CompareTag(playerString) && canPickup) {
-            PickUpEffect(typeOfPickUp);
-            Destroy(gameObject);
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag(playerString) && !preventPickup)
+        {
+
+            // check cost
+            if (FindObjectOfType<RupeeWallet>().currentRupees >= this.cost)
+            {
+                FindObjectOfType<RupeeWallet>().DecreaseRupeeCount(cost);
+                // PickUpEffect() will also destroy this object after effect
+                PickUpEffect();
+            }
         }
     }
 
     // PickUpEffect() uses the typeOfPickup to perform the corresponding effect
-    public void PickUpEffect(TypeOfPickUp pickUpType)
+    public void PickUpEffect()
     {
-        if (pickUpType == TypeOfPickUp.Rupee)
+        if (typeOfPickUp == TypeOfPickUp.Rupee)
         {
             PickUpRupee();
         }
-        else if (pickUpType == TypeOfPickUp.Heart)
+        else if (typeOfPickUp == TypeOfPickUp.Heart)
         {
             PickUpHeart();
         }
-        else if (pickUpType == TypeOfPickUp.Heart_Container)
+        else if (typeOfPickUp == TypeOfPickUp.Heart_Container)
         {
             IncreaseHealth();
         }
+
+        // Destroy after pickup
+        Destroy(gameObject);
     }
 
     private void PickUpRupee() {
@@ -47,6 +59,7 @@ public class PickUp : MonoBehaviour
     private void IncreaseHealth()
     {
         // Adds 1 to maxHealth and then increases the current health by 1
+        // TODO: check for going over the maximum number of heart containers
         FindObjectOfType<PlayerHealth>().maxHealth += 1;
         FindObjectOfType<PlayerHealth>().AddHealth(1);
     }

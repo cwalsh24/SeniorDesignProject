@@ -137,4 +137,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   typeOfPickUp: 3
-  canPickup: 1
+  preventPickup: 0
