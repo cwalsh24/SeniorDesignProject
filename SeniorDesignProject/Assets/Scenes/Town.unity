@@ -5712,6 +5712,67 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC_Susie
       objectReference: {fileID: 0}
+    - target: {fileID: 5267928669602659372, guid: 66a19284b9a67d343b6d2df95a875622, type: 3}
+      propertyPath: lines.Array.size
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5267928669602659372, guid: 66a19284b9a67d343b6d2df95a875622, type: 3}
+      propertyPath: lines.Array.data[1]
+      value: 'Where did you come from? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5267928669602659372, guid: 66a19284b9a67d343b6d2df95a875622, type: 3}
+      propertyPath: lines.Array.data[3]
+      value: The mainland, I-
+      objectReference: {fileID: 0}
+    - target: {fileID: 5267928669602659372, guid: 66a19284b9a67d343b6d2df95a875622, type: 3}
+      propertyPath: lines.Array.data[5]
+      value: That's impossible! What about the blockade!?!?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5267928669602659372, guid: 66a19284b9a67d343b6d2df95a875622, type: 3}
+      propertyPath: lines.Array.data[7]
+      value: I came through a portal. I am a Janissary.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5267928669602659372, guid: 66a19284b9a67d343b6d2df95a875622, type: 3}
+      propertyPath: lines.Array.data[8]
+      value: n-Tyrion
+      objectReference: {fileID: 0}
+    - target: {fileID: 5267928669602659372, guid: 66a19284b9a67d343b6d2df95a875622, type: 3}
+      propertyPath: lines.Array.data[9]
+      value: I was sent by the Imperium to slay the monsters.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5267928669602659372, guid: 66a19284b9a67d343b6d2df95a875622, type: 3}
+      propertyPath: lines.Array.data[10]
+      value: n-Tyrion
+      objectReference: {fileID: 0}
+    - target: {fileID: 5267928669602659372, guid: 66a19284b9a67d343b6d2df95a875622, type: 3}
+      propertyPath: lines.Array.data[11]
+      value: After that, the blockade and quarantine will be lifted.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5267928669602659372, guid: 66a19284b9a67d343b6d2df95a875622, type: 3}
+      propertyPath: lines.Array.data[12]
+      value: n-Susie
+      objectReference: {fileID: 0}
+    - target: {fileID: 5267928669602659372, guid: 66a19284b9a67d343b6d2df95a875622, type: 3}
+      propertyPath: lines.Array.data[13]
+      value: Gods be praised! There is a shop here that might have some equipment
+        you can use.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5267928669602659372, guid: 66a19284b9a67d343b6d2df95a875622, type: 3}
+      propertyPath: lines.Array.data[14]
+      value: n-Susie
+      objectReference: {fileID: 0}
+    - target: {fileID: 5267928669602659372, guid: 66a19284b9a67d343b6d2df95a875622, type: 3}
+      propertyPath: lines.Array.data[15]
+      value: Aside from that, we don't have much to offer I'm afraid.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5267928669602659372, guid: 66a19284b9a67d343b6d2df95a875622, type: 3}
+      propertyPath: lines.Array.data[16]
+      value: n-Tyrion
+      objectReference: {fileID: 0}
+    - target: {fileID: 5267928669602659372, guid: 66a19284b9a67d343b6d2df95a875622, type: 3}
+      propertyPath: lines.Array.data[17]
+      value: 'Thanks for the tip. '
+      objectReference: {fileID: 0}
     - target: {fileID: 5267928669602659375, guid: 66a19284b9a67d343b6d2df95a875622, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -33151,6 +33212,46 @@ PrefabInstance:
     - target: {fileID: 7680889227704313396, guid: e12727111f6dfcd4abe61f4efedb77d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680889227704313397, guid: e12727111f6dfcd4abe61f4efedb77d0, type: 3}
+      propertyPath: lines.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680889227704313397, guid: e12727111f6dfcd4abe61f4efedb77d0, type: 3}
+      propertyPath: lines.Array.data[1]
+      value: Let me give you a bit of advice...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680889227704313397, guid: e12727111f6dfcd4abe61f4efedb77d0, type: 3}
+      propertyPath: lines.Array.data[2]
+      value: n-Baldwin
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680889227704313397, guid: e12727111f6dfcd4abe61f4efedb77d0, type: 3}
+      propertyPath: lines.Array.data[3]
+      value: 'Hold shift to run. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680889227704313397, guid: e12727111f6dfcd4abe61f4efedb77d0, type: 3}
+      propertyPath: lines.Array.data[4]
+      value: n-Baldwin
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680889227704313397, guid: e12727111f6dfcd4abe61f4efedb77d0, type: 3}
+      propertyPath: lines.Array.data[5]
+      value: Left click to use your sword.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680889227704313397, guid: e12727111f6dfcd4abe61f4efedb77d0, type: 3}
+      propertyPath: lines.Array.data[6]
+      value: n-Baldwin
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680889227704313397, guid: e12727111f6dfcd4abe61f4efedb77d0, type: 3}
+      propertyPath: lines.Array.data[7]
+      value: Right click to use your equipped item.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680889227704313397, guid: e12727111f6dfcd4abe61f4efedb77d0, type: 3}
+      propertyPath: lines.Array.data[8]
+      value: n-Baldwin
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680889227704313397, guid: e12727111f6dfcd4abe61f4efedb77d0, type: 3}
+      propertyPath: lines.Array.data[9]
+      value: Press 'E' to open your inventory.
       objectReference: {fileID: 0}
     - target: {fileID: 7680889227704313398, guid: e12727111f6dfcd4abe61f4efedb77d0, type: 3}
       propertyPath: m_Name

@@ -20,4 +20,16 @@ public class RupeeWallet : MonoBehaviour
     public void IncreaseRupeeCount(int amount) {
         currentRupees += amount;
     }
+
+    public void DecreaseRupeeCount(int amount)
+    {
+        if (currentRupees - amount >= 0)
+        {
+            currentRupees -= amount;
+        }
+        else
+        {
+            currentRupees = 0;
+        }
+    }
 }
