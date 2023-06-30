@@ -10,12 +10,16 @@ public class PickUp : MonoBehaviour
     public bool preventPickup;
     public int cost;
 
+    //Adding sound effects
+    public AudioClip pickupSound; 
+
     public const string playerString = "Player";
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag(playerString) && !preventPickup)
         {
+            AudioSource.PlayClipAtPoint(pickupSound, transform.position, 1f);
 
             // check cost
             if (FindObjectOfType<RupeeWallet>().currentRupees >= this.cost)
