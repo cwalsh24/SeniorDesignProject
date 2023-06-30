@@ -19,7 +19,7 @@ public class EnemyHealth : MonoBehaviour
 
     //added for sound effects
     [SerializeField] private AudioSource DamageSound;
-    //[SerializeField] private AudioSource DeathSound;
+    [SerializeField] private AudioClip DeathSound;
 
     #endregion
 
@@ -49,7 +49,7 @@ public class EnemyHealth : MonoBehaviour
             if ( Random.Range(0, 3) == 0) { // 1/3 chance of dropping the possibleDrop
                 Instantiate(possibleDrop, transform.position, transform.rotation);
             }
-
+            AudioSource.PlayClipAtPoint(DeathSound, transform.position, 1f);
             // destroy the dead enemy
             Destroy(gameObject);
         }

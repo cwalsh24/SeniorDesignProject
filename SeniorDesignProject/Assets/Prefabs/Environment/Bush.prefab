@@ -127,7 +127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be0d3acd7b90934eafa8eb47c21a140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blue_rupee: {fileID: 7986285643084891503, guid: 1abcdbbfea1006448ab3ae8660a7d6fb, type: 3}
+  Heart: {fileID: 0}
+  BlueRupee: {fileID: 0}
   objectType: 1
   BreakSound: {fileID: 6033503387850713099}
 --- !u!50 &935150512
@@ -190,7 +191,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 100
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
