@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Cave.unity
     guid: 547ddf090848dcf489921f41932bdef1
   - enabled: 1
+    path: Assets/Scenes/CaveScene2.unity
+    guid: ea1bc0e3198a30e4f9b571defbfdea6c
+  - enabled: 1
     path: Assets/Scenes/CountrySide.unity
     guid: 4ff23f2a2c7283841aef6f03d87b7147
   - enabled: 1

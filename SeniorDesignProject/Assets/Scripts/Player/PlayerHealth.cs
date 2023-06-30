@@ -27,8 +27,8 @@ public class PlayerHealth : MonoBehaviour
     private bool isDead = false;
     private Rigidbody2D rb;
 
-    //Adding this to attempt to put in a sound effect for picking up hearts
-    [SerializeField] private AudioSource HPickup;
+    //Adding this to attempt to put in a sound effect for picking up hearts (likely dont need this anymore) 
+    //[SerializeField] private AudioSource HPickup;
 
     //Adding this to attempt to put in a sound effect for dying
     [SerializeField] private AudioSource DeathSound;
@@ -62,7 +62,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void AddHealth(int health) {
         int newHealth = this.currentHealth + health;
-        HPickup.Play();
+        //HPickup.Play();
 
         if (newHealth > maxHealth)
         {

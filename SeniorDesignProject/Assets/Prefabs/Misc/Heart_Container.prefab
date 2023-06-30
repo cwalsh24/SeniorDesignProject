@@ -138,3 +138,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typeOfPickUp: 3
   preventPickup: 0
+  cost: 0
+  pickupSound: {fileID: 8300000, guid: 595816c477247e64f87cdd07b1440979, type: 3}
