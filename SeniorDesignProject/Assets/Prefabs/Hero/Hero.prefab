@@ -332,7 +332,6 @@ MonoBehaviour:
   whiteFlashTime: 0.1
   damageRecoveryTime: 0.5
   respawnTimeFloat: 2
-  HPickup: {fileID: -4545674965708198809}
   DeathSound: {fileID: 761183089419837874}
   DamageSound: {fileID: -488361962153671062}
 --- !u!114 &-342634711833211619
@@ -360,7 +359,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b22fe78c4915ad641bad7770492ed290, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.57
+  m_Volume: 0.504
   m_Pitch: 1
   Loop: 0
   Mute: 0
