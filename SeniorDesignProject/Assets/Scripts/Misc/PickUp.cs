@@ -26,10 +26,17 @@ public class PickUp : MonoBehaviour
         playerControls = new PlayerControls();
         if (cost > 0)
         {
+            // setup ShopActivator on this object
             shopActivator = gameObject.AddComponent<ShopActivator>();
             shopActivator.itemType = typeOfPickUp;
             shopActivator.cost = cost;
             shopActivator.itemSprite = gameObject.GetComponent<SpriteRenderer>().sprite;
+
+            // Add a larger collider for shop interactions
+            Collider2D shopCollision = gameObject.AddComponent<CapsuleCollider2D>();
+            GetComponent<CapsuleCollider2D>().direction = CapsuleDirection2D.Vertical;
+            GetComponent<CapsuleCollider2D>().size = new Vector2(1.3f, 3f);
+            GetComponent<CapsuleCollider2D>().offset = new Vector2(.008f, -.3f);
         }
 
     }
@@ -56,15 +63,7 @@ public class PickUp : MonoBehaviour
     {
         if (other.gameObject.CompareTag(playerString) && cost <= 0)
         {
-            // if the item has a cost, space has to be pressed for pickup
-            if (cost > 0)
-            {
-                return;
-            }
-            else // no cost, pick up item
-            {
-                PickUpItem();
-            }
+            PickUpItem();
         }
     }
 
