@@ -141,6 +141,7 @@ MonoBehaviour:
   preventPickup: 0
   cost: 0
   pickupSound: {fileID: 8300000, guid: 595816c477247e64f87cdd07b1440979, type: 3}
+  pickupVolume: 2.5
 --- !u!82 &-7704564043640960226
 AudioSource:
   m_ObjectHideFlags: 0

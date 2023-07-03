@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
-    // Keeping Bomb as placeholder if you wanted to implement something like item limited amounts 
-    public enum TypeOfPickUp{Rupee, Bomb, Heart, Heart_Container};
+    public enum TypeOfPickUp{Rupee, Heart, Heart_Container};
     public TypeOfPickUp typeOfPickUp;
     public bool preventPickup;
     public int cost;
 
     //Adding sound effects
-    public AudioClip pickupSound; 
+    public AudioClip pickupSound;
+    public float pickupVolume = 1f;
 
     public const string playerString = "Player";
 
@@ -19,7 +19,7 @@ public class PickUp : MonoBehaviour
     {
         if (other.gameObject.CompareTag(playerString) && !preventPickup)
         {
-            AudioSource.PlayClipAtPoint(pickupSound, transform.position, 1f);
+            AudioSource.PlayClipAtPoint(pickupSound, transform.position, pickupVolume);
 
             // check cost
             if (FindObjectOfType<RupeeWallet>().currentRupees >= this.cost)
