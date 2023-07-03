@@ -140,4 +140,5 @@ MonoBehaviour:
   preventPickup: 0
   cost: 0
   pickupSound: {fileID: 8300000, guid: 54cb718fa6edaf24da317294d0b1a2fb, type: 3}
+  failedPickupSound: {fileID: 8300000, guid: c6688394e37594eb281516f1bff4856f, type: 3}
   pickupVolume: 2.5

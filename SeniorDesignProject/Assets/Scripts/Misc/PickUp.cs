@@ -7,27 +7,70 @@ public class PickUp : MonoBehaviour
     public enum TypeOfPickUp{Rupee, Heart, Heart_Container};
     public TypeOfPickUp typeOfPickUp;
     public bool preventPickup;
-    public int cost;
+    public int cost = 0;
 
     //Adding sound effects
     public AudioClip pickupSound;
-    public float pickupVolume = 1f;
+    public AudioClip failedPickupSound;
+    public float pickupVolume = 1f; // default volume
 
     public const string playerString = "Player";
+    private PlayerControls playerControls;
+
+    #region Unity Methods
+    private void Awake()
+    {
+        playerControls = new PlayerControls();
+    }
+
+    private void OnEnable()
+    {
+        playerControls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        playerControls.Disable();
+    }
+
+    private void Start()
+    {
+        playerControls.Spacebar.Use.performed += _ => PickUpItem();
+    }
+    #endregion
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag(playerString) && !preventPickup)
+        if (other.gameObject.CompareTag(playerString) && cost <= 0)
+        {
+            // if the item has a cost, space has to be pressed for pickup
+            if (cost > 0)
+            {
+                // TODO: For shop items, a description of the item should appear on the screen
+                return;
+            }
+            else // no cost, pick up item
+            {
+                PickUpItem();
+            }
+        }
+    }
+
+    private void PickUpItem()
+    {
+        // check cost
+        if (FindObjectOfType<RupeeWallet>().currentRupees >= this.cost)
         {
             AudioSource.PlayClipAtPoint(pickupSound, transform.position, pickupVolume);
 
-            // check cost
-            if (FindObjectOfType<RupeeWallet>().currentRupees >= this.cost)
-            {
-                FindObjectOfType<RupeeWallet>().DecreaseRupeeCount(cost);
-                // PickUpEffect() will also destroy this object after effect
-                PickUpEffect();
-            }
+            FindObjectOfType<RupeeWallet>().DecreaseRupeeCount(cost);
+
+            // PickUpEffect() will also destroy this object after effect
+            PickUpEffect();
+        }
+        else
+        {
+            AudioSource.PlayClipAtPoint(failedPickupSound, transform.position, 1f);
         }
     }
 
