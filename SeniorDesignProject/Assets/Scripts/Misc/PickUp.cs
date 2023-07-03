@@ -17,6 +17,8 @@ public class PickUp : MonoBehaviour
     public const string playerString = "Player";
     private PlayerControls playerControls;
 
+
+
     #region Unity Methods
     private void Awake()
     {
@@ -38,6 +40,8 @@ public class PickUp : MonoBehaviour
         playerControls.Spacebar.Use.performed += _ => PickUpItem();
     }
     #endregion
+
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -70,7 +74,8 @@ public class PickUp : MonoBehaviour
         }
         else
         {
-            AudioSource.PlayClipAtPoint(failedPickupSound, transform.position, 1f);
+            // if not enough rupees, play failedPickupSound
+            AudioSource.PlayClipAtPoint(failedPickupSound, transform.position, .5f);
         }
     }
 
