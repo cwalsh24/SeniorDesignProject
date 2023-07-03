@@ -16,6 +16,7 @@ public class PickUp : MonoBehaviour
 
     public const string playerString = "Player";
     private PlayerControls playerControls;
+    private ShopActivator shopActivator;
 
 
 
@@ -23,6 +24,14 @@ public class PickUp : MonoBehaviour
     private void Awake()
     {
         playerControls = new PlayerControls();
+        if (cost > 0)
+        {
+            shopActivator = gameObject.AddComponent<ShopActivator>();
+            shopActivator.itemType = typeOfPickUp;
+            shopActivator.cost = cost;
+            shopActivator.itemSprite = gameObject.GetComponent<SpriteRenderer>().sprite;
+        }
+
     }
 
     private void OnEnable()
@@ -50,7 +59,6 @@ public class PickUp : MonoBehaviour
             // if the item has a cost, space has to be pressed for pickup
             if (cost > 0)
             {
-                // TODO: For shop items, a description of the item should appear on the screen
                 return;
             }
             else // no cost, pick up item

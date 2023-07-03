@@ -8,8 +8,7 @@ public class ShopActivator : MonoBehaviour
 {
     #region Public Variables
 
-    public string itemName;
-    public string description;
+    public PickUp.TypeOfPickUp itemType;
     public int cost;
     [SerializeField] public Sprite itemSprite;
 
@@ -26,14 +25,11 @@ public class ShopActivator : MonoBehaviour
 
     #endregion
 
-    #region Private Methods 
-
-    private void OpenDialogue() {
-    }
+    #region Private Methods
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.tag == playerString) {
-            ShopManager.Instance.ShowDialogue(itemName, description, cost, itemSprite);
+            ShopManager.Instance.ShowDialogue(itemType, itemSprite, cost);
         }
     }
 

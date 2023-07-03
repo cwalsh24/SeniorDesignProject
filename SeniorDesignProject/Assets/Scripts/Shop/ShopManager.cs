@@ -26,11 +26,9 @@ public class ShopManager : Singleton<ShopManager>
     #region Public Methods
     
     // newLines is passed through from the DialogueActivator class that calls this function
-    public void ShowDialogue(string itemName, string description, int cost, Sprite itemSprite) {
-        this.itemName.text = itemName;
-        this.description.text = description;
-        this.cost.text = cost.ToString();
-        this.itemSprite.sprite = itemSprite;
+    public void ShowDialogue(PickUp.TypeOfPickUp itemType, Sprite itemSprite, int cost) {
+        UpdateInfo(itemType, itemSprite, cost);
+        
         itemBox.SetActive(true);
         nameBox.SetActive(true);
     }
@@ -39,6 +37,27 @@ public class ShopManager : Singleton<ShopManager>
     {
         itemBox.SetActive(false);
         nameBox.SetActive(false);
+    }
+
+    #endregion
+
+    #region Private Methods
+
+    private void UpdateInfo(PickUp.TypeOfPickUp itemType, Sprite itemSprite, int cost)
+    {
+        switch(itemType)
+        {
+            // ADD ITEM INFO HERE BASED ON PickUp.TypeOfPickUp TYPE
+            case PickUp.TypeOfPickUp.Heart_Container:
+                this.itemName.text = "Heart Container";
+                this.description.text = "Increases your maximum amount of hearts.";
+                this.cost.text = cost.ToString();
+                this.itemSprite.sprite = itemSprite;
+                break;
+            default:
+                this.itemName.text = "Item info not set in Shop Manager...";
+                break;
+        }
     }
 
     #endregion
