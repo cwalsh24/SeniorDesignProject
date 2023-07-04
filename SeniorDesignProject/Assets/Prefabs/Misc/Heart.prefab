@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 477870603
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -1672093659, guid: 7886e8113d6a445ac86ae3062cf193ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_Size: {x: 0.8125, y: 0.625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &7986285643084891499
@@ -122,7 +122,7 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.016274035, y: 0.16019422}
+  m_Offset: {x: 0, y: 0.013827031}
   m_Size: {x: 0.832548, y: 0.832548}
   m_Direction: 0
 --- !u!114 &7986285643084891498
@@ -137,10 +137,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd5a7154b742cb549820fedac77dd5c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeOfPickUp: 2
+  typeOfPickUp: 1
   preventPickup: 0
   cost: 0
   pickupSound: {fileID: 8300000, guid: 595816c477247e64f87cdd07b1440979, type: 3}
+  failedPickupSound: {fileID: 8300000, guid: c6688394e37594eb281516f1bff4856f, type: 3}
+  pickupVolume: 0.1
 --- !u!82 &-7704564043640960226
 AudioSource:
   m_ObjectHideFlags: 0

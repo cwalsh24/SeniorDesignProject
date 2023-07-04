@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 477870603
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4916527796809392215, guid: b11c0893a4fc40f4e93c9d49e9be42e5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 89380af56340c5a40b24692685cf5c19, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!70 &7986285643084891502
@@ -140,3 +140,5 @@ MonoBehaviour:
   preventPickup: 0
   cost: 0
   pickupSound: {fileID: 8300000, guid: 54cb718fa6edaf24da317294d0b1a2fb, type: 3}
+  failedPickupSound: {fileID: 8300000, guid: c6688394e37594eb281516f1bff4856f, type: 3}
+  pickupVolume: 0.2

@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7986285643084891496, guid: abe1327c9227a4218a2ad6bc3915fa3d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.58
+      value: 1.15
       objectReference: {fileID: 0}
     - target: {fileID: 7986285643084891496, guid: abe1327c9227a4218a2ad6bc3915fa3d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -180,6 +180,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7986285643084891498, guid: abe1327c9227a4218a2ad6bc3915fa3d, type: 3}
       propertyPath: cost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7986285643084891502, guid: abe1327c9227a4218a2ad6bc3915fa3d, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7986285643084891503, guid: abe1327c9227a4218a2ad6bc3915fa3d, type: 3}
@@ -816,6 +820,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1583575461, guid: 6e29dc9e4ec42fc459cbffd08d059657, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2146965203, guid: 6e29dc9e4ec42fc459cbffd08d059657, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 616352921314772351, guid: 6e29dc9e4ec42fc459cbffd08d059657, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1177898688819844553, guid: 6e29dc9e4ec42fc459cbffd08d059657, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3478481237002393696, guid: 6e29dc9e4ec42fc459cbffd08d059657, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -903,6 +923,26 @@ PrefabInstance:
     - target: {fileID: 3478481237002393700, guid: 6e29dc9e4ec42fc459cbffd08d059657, type: 3}
       propertyPath: m_Name
       value: UI Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4180583653140969865, guid: 6e29dc9e4ec42fc459cbffd08d059657, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -26.746277
+      objectReference: {fileID: 0}
+    - target: {fileID: 4180583653140969865, guid: 6e29dc9e4ec42fc459cbffd08d059657, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -51.54602
+      objectReference: {fileID: 0}
+    - target: {fileID: 4632622047655648895, guid: 6e29dc9e4ec42fc459cbffd08d059657, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2.6034546
+      objectReference: {fileID: 0}
+    - target: {fileID: 4632622047655648895, guid: 6e29dc9e4ec42fc459cbffd08d059657, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -2.3529053
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810738877155266071, guid: 6e29dc9e4ec42fc459cbffd08d059657, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e29dc9e4ec42fc459cbffd08d059657, type: 3}
