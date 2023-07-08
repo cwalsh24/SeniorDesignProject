@@ -53,6 +53,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LockwoodVillage.unity
     guid: 0a1d6adfd4b5e484f8395f1d0866d68c
+  - enabled: 1
+    path: Assets/Scenes/LockwoodShop.unity
+    guid: 64a47ec4f6bf02743a0e9d02e3cd4e26
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729

@@ -6920,6 +6920,92 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7052989794357947653, guid: 1a5e718e8dd3b6041b332a0db41d1745, type: 3}
   m_PrefabInstance: {fileID: 745815062}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &757424129
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2057460620}
+    m_Modifications:
+    - target: {fileID: 403739092, guid: d1e28fcda0a39fe40b85647532c4283b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 403739092, guid: d1e28fcda0a39fe40b85647532c4283b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708388465002960423, guid: d1e28fcda0a39fe40b85647532c4283b, type: 3}
+      propertyPath: m_Name
+      value: AreaExit (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708388465002960424, guid: d1e28fcda0a39fe40b85647532c4283b, type: 3}
+      propertyPath: areaToLoad
+      value: LockwoodShop
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708388465002960424, guid: d1e28fcda0a39fe40b85647532c4283b, type: 3}
+      propertyPath: areaTransitionName
+      value: LockwoodShop
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708388465002960425, guid: d1e28fcda0a39fe40b85647532c4283b, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708388465002960425, guid: d1e28fcda0a39fe40b85647532c4283b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3797231
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708388465002960425, guid: d1e28fcda0a39fe40b85647532c4283b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2109375
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708388465002960425, guid: d1e28fcda0a39fe40b85647532c4283b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 36.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708388465002960425, guid: d1e28fcda0a39fe40b85647532c4283b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708388465002960425, guid: d1e28fcda0a39fe40b85647532c4283b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708388465002960425, guid: d1e28fcda0a39fe40b85647532c4283b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708388465002960425, guid: d1e28fcda0a39fe40b85647532c4283b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708388465002960425, guid: d1e28fcda0a39fe40b85647532c4283b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708388465002960425, guid: d1e28fcda0a39fe40b85647532c4283b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708388465002960425, guid: d1e28fcda0a39fe40b85647532c4283b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708388465002960425, guid: d1e28fcda0a39fe40b85647532c4283b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708388465002960425, guid: d1e28fcda0a39fe40b85647532c4283b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d1e28fcda0a39fe40b85647532c4283b, type: 3}
+--- !u!4 &757424130 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5708388465002960425, guid: d1e28fcda0a39fe40b85647532c4283b, type: 3}
+  m_PrefabInstance: {fileID: 757424129}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &758304294
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50849,6 +50935,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 852864660}
+  - {fileID: 757424130}
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -50881,7 +50968,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9db99f59a3defcf4a968ff3b073c8741, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.106
+  m_Volume: 0.046
   m_Pitch: 1
   Loop: 1
   Mute: 0
