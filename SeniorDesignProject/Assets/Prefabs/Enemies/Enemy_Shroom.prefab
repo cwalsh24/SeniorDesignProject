@@ -186,7 +186,7 @@ MonoBehaviour:
   possibleDrop: {fileID: 7986285643084891503, guid: 31c3936cc77a746e0b051c70910d7ac4, type: 3}
   setDefaultMatRestorefloat: 0.1
   DamageSound: {fileID: 5760917174309395039}
-  DeathSound: {fileID: 8300000, guid: 595816c477247e64f87cdd07b1440979, type: 3}
+  DeathSound: {fileID: 8300000, guid: b0b016a7371b0d7408d38d59ae667835, type: 3}
 --- !u!114 &-7731275462701633184
 MonoBehaviour:
   m_ObjectHideFlags: 0
